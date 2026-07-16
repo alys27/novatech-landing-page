@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovaTech</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav__logo">NovaTech</div>
+            <button class="nav__toggle" aria-label="Menyunu aç / bağla" aria-expanded="false">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav__menu">
+                <li><a href="#about" class="nav__link">Haqqımızda</a></li>
+                <li><a href="#gallery" class="nav__link">Qalereya</a></li>
+                <li><a href="#contact" class="nav__link">Əlaqə</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero">
+            <div class="hero__content">
+                <h1 class="hero__title">Rəqəmsal Dünyada Sizin Güvənli Tərəfdaşınız</h1>
+                <p class="hero__text">Biz biznesiniz üçün ən innovativ web və mobil həllərı sıfırdan hazırlayırıq.</p>
+                <a href="#contact" class="hero__cta">Bizimlə Əlaqə</a>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <h2 class="about__title">Haqqımızda</h2>
+            <h3 class="about__subtitle">Niyə bizi seçməlisiniz?</h3>
+            <p class="about__text">10 illik təcrübəmizlə, biz müştərilərimizə yüksək keyfiyyətli və innovativ həllər təqdim edirik. Bizim komandamız, hər bir layihəni fərdi yanaşma ilə idarə edir və müştərilərimizin ehtiyaclarını tam şəkildə qarşılayır.</p>
+            <h4 class="about__subtitle">Texniki Dəstək Linkimiz:</h4>
+            <a href="https://novatech-solutions.az/super-long-url-tracking-token-id-9876543210qwertyuiopasdfghjklzxcvbnm1234567890" class="about__support-link">https://novatech-solutions.az/super-long-url-tracking-token-id-9876543210qwertyuiopasdfghjklzxcvbnm1234567890</a>
+            
+            <div class="about__stats">
+              <div class="about__stat">
+                <span class="about__stat-number">150+</span>
+                <p class="about__stat-label">Uğurlu layihə</p>
+              </div>
+              
+              <div class="about__stat">
+                <span class="about__stat-number">99%</span>
+                <p class="about__stat-label">Müştəri məmnuniyyəti</p>
+              </div>            
+
+            </div>
+
+        </section>
+
+        <section id="gallery" class="gallery">
+            <h2 class="gallery__title">Qalereya</h2>
+            <div class="gallery__grid">
+                <img src="https://picsum.photos/id/48/900/600" alt="Taxta masa üzərində noutbuk, kafe kimi otaq mühitində" class="gallery__image">
+                <img src="https://picsum.photos/id/119/900/600" alt="Noutbuk, qutu və saat masa üzərində, minimalist iş sahəsi" class="gallery__image">
+                <img src="https://picsum.photos/id/60/900/600" alt="Monitor, planşet, klaviatura və digər texnika əşyaları yuxarıdan görüntü" class="gallery__image">
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2 class="contact__title">Əlaqə</h2>
+
+            <form class="contact__form" novalidate>
+
+                <div class="contact__field">
+                    <label for="name" class="contact__label">Ad və soyad</label>
+                    <input type="text" id="name" name="name" class="contact__input">
+                    <span class="contact__error" id="name-error"></span>
+                </div>
+
+                <div class="contact__field">
+                    <label for="email" class="contact__label">Elektron poçt</label>
+                    <input type="email" id="email" name="email" class="contact__input">
+                    <span class="contact__error" id="email-error"></span>
+                </div>
+
+                <div class="contact__field">
+                    <label for="message" class="contact__label">Mesajınız</label>
+                    <textarea id="message" name="message" class="contact__input contact__input--textarea" rows="5"></textarea>
+                    <span class="contact__error" id="message-error"></span>
+                </div>
+
+                <button type="submit" class="contact__submit">Göndər</button>
+
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__content">
+            <p class="footer__copy">&copy; 2026 NovaTech. Bütün hüquqlar qorunur.</p>
+
+            <div class="footer__contact">
+                <a href="mailto:info@novatech-solutions.az" class="footer__email">info@novatech-solutions.az</a>
+                <p class="footer__phone">+994 XX XXX XX XX</p>
+            </div>
+
+            <ul class="footer__socials">
+                <li><a href="#" aria-label="Facebook səhifəmiz">Facebook</a></li>
+                <li><a href="#" aria-label="Instagram səhifəmiz">Instagram</a></li>
+                <li><a href="#" aria-label="LinkedIn səhifəmiz">LinkedIn</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
