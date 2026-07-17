@@ -29,6 +29,11 @@ body {
     border-bottom: 1px solid var(--color-gray);
 }
 
+.header.scrolled {
+    box-shadow: 0 4px 15px rgba(38, 11, 11, 0.15);
+    background: var(--color-light);
+}
+
 .nav {
     display: flex;
     justify-content: space-between;
@@ -59,6 +64,11 @@ body {
     color: var(--color-primary)
 }
 
+.nav__link--active {
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
 .nav__toggle {
     display: none;
     background: none;
@@ -76,6 +86,18 @@ body {
     background: var(--color-dark);
     border-radius: 2px;
     transition: 0.3s ease;
+}
+
+.nav__toggle.active .hamburger:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.nav__toggle.active .hamburger:nth-child(2) {
+    opacity: 0;
+}
+
+.nav__toggle.active .hamburger:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
 }
 
 .hero {
@@ -140,6 +162,7 @@ body {
     padding: 80px 20px;
     text-align: center;
     background: var(--color-light);
+    scroll-margin-top: 80px;
 }
 
 .about__title {
@@ -206,6 +229,7 @@ body {
     margin: 0 auto;
     padding: 40px 20px;
     text-align: center;
+    scroll-margin-top: 80px;
 }
 
 .gallery__title {
@@ -260,6 +284,7 @@ body {
     margin: 0 auto;
     padding: 40px 20px;
     background: var(--color-light);
+    scroll-margin-top: 80px;
 }
 
 .contact__title {
@@ -349,6 +374,27 @@ body {
     text-decoration: none;
 }
 
+
+.scroll-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    color: var(--color-light);
+    border: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+    display: none;
+    z-index: 200;
+    transition: opacity 0.3s ease;
+}
+
+.scroll-top.show {
+    display: block;
+}
 
 
 /* Tablet */
