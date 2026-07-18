@@ -104,7 +104,12 @@ contactForm.addEventListener('submit', function(e) {
     }
 
     if (isValid) {
-        alert('Mesajınız uğurla göndərildi!');
-        contactForm.reset();
-    }
+    const successMessage = document.querySelector('#successMessage');
+    successMessage.classList.add('show');
+    contactForm.reset();
+
+    setTimeout(function() {
+        successMessage.classList.remove('show');
+    }, 4000);
+}
 });
