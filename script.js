@@ -61,3 +61,50 @@ window.addEventListener('scroll', function() {
 scrollTopBtn.addEventListener('click', function() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+
+const contactForm = document.querySelector('.contact__form');
+
+contactForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    let isValid = true;
+
+    const nameInput = document.querySelector('#name');
+    const nameError = document.querySelector('#name-error');
+
+    if (nameInput.value.trim() === '') {
+        nameError.textContent = 'Ad və soyad boş qala bilməz';
+        isValid = false;
+    } else {
+        nameError.textContent = '';
+    }
+
+    const emailInput = document.querySelector('#email');
+    const emailError = document.querySelector('#email-error');
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (emailInput.value.trim() === '') {
+        emailError.textContent = 'Email boş qala bilməz';
+        isValid = false;
+    } else if (!emailPattern.test(emailInput.value.trim())) {
+        emailError.textContent = 'Düzgün email formatı daxil edin (məs. ad@domain.com)';
+        isValid = false;
+    } else {
+        emailError.textContent = '';
+    }
+
+    const messageInput = document.querySelector('#message');
+    const messageError = document.querySelector('#message-error');
+
+    if (messageInput.value.trim() === '') {
+        messageError.textContent = 'Mesaj boş qala bilməz';
+        isValid = false;
+    } else {
+        messageError.textContent = '';
+    }
+
+    if (isValid) {
+        alert('Mesajınız uğurla göndərildi!');
+        contactForm.reset();
+    }
+});
