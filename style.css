@@ -110,7 +110,7 @@ body {
 }
 
 .hero__title {
-    font: 'Playfair Display', serif;
+    font-family: 'Lexend', sans-serif;
     font-weight: 700;
     font-size: 2.5rem;
 }
@@ -151,11 +151,6 @@ body {
 }
 
 
-.cta:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-}
-
 .about {
     max-width: var(--max-width);
     margin: 0 auto;
@@ -187,15 +182,6 @@ body {
     margin-top: 40px;
 }
 
-.about__support {
-    display: block;
-    background: #f5dde0;
-    border: 2px solid #5c2a3a;
-    border-radius: 10px;
-    padding: 20px;
-    margin-top: 20px;
-    text-align: left;
-}
 
 .support-banner {
     max-width: var(--max-width);
@@ -359,11 +345,11 @@ body {
     text-align: center;
 }
 
-.footer_content {
+.footer__content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 16x;
+    gap: 16px;
 }
 
 .footer__socials {

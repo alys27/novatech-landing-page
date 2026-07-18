@@ -25,7 +25,6 @@ const scrollTopBtn = document.querySelector('#scrollTop');
 const sections = document.querySelectorAll('main section');
 
 window.addEventListener('scroll', function() {
-    console.log('scroll oldu, scrollY:', window.scrollY);
 
     // 1. Header rəngi
     if (window.scrollY > 50) {
