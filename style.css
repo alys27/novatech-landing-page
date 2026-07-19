@@ -293,6 +293,10 @@ body {
     font-size: 1rem;
 }
 
+.contact__input--textarea {
+    resize: none;
+}
+
 .contact__label {
     margin-bottom: 6px;
     font-weight: 600;
