@@ -112,3 +112,17 @@ contactForm.addEventListener('submit', function(e) {
     }, 4000);
 }
 });
+
+const revealElements = document.querySelectorAll('.reveal');
+
+const revealObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, { threshold: 0.15 });
+
+revealElements.forEach(function(el) {
+    revealObserver.observe(el);
+});
