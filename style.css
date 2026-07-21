@@ -18,6 +18,7 @@ body {
     font-weight: 300;
     color: var(--color-dark);
     line-height: 1.6;
+    position: relative;
 }
 
 .header {
@@ -239,10 +240,11 @@ body {
     justify-content: center;
     gap: 60px;
     margin-top: 40px;
+    
 }
 
 .about__stat {
-    background: var(--color-beige);
+    background: rgba(232, 221, 208, 0.5);
     padding: 24px 32px;
     border-radius: 12px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -450,6 +452,12 @@ body {
     text-decoration: none;
 }
 
+.footer__phone {
+    color: var(--color-light);
+    text-decoration: none;
+    display: inline-block;
+}
+
 .reveal {
     opacity: 0;
     transform: translateY(30px);
@@ -499,7 +507,7 @@ body {
 .features__item {
     text-align: center;
     padding: 32px 24px;
-    background: var(--color-beige);
+    background: rgba(232, 221, 208, 0.5);
     border-radius: 12px;
     transition: transform 0.3s ease;
 }
@@ -525,6 +533,13 @@ body {
 .features__text {
     font-size: 0.95rem;
     color: var(--color-gray);
+}
+
+.section-icon {
+    width: 32px;
+    height: 32px;
+    color: var(--color-primary);
+    margin-bottom: 12px;
 }
 
 
@@ -569,6 +584,7 @@ body {
 
     .about__stats {
         gap: 40px;
+        background: rgba(232, 221, 208, 0.5);
     }
 
     .contact {
@@ -647,3 +663,60 @@ body {
         gap: 24px;
     }
 }
+
+
+/* circuits */
+
+:root {
+    --circuit-color: #5d4037;      
+    --circuit-glow-color: #ffd54f; 
+    --circuit-opacity: 0.1;      
+    --circuit-min-speed: 5;        
+    --circuit-max-speed: 11;       
+}
+
+[data-circuit-bg] {
+    position: relative;
+    overflow: hidden;
+}
+
+[data-circuit-bg] > *:not(.circuit-bg-wrapper) {
+    position: relative;
+    z-index: 1;
+}
+
+.circuit-bg-wrapper {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    opacity: var(--circuit-opacity);
+    overflow: hidden;
+}
+
+.circuit-bg-wrapper svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.cb-line {
+    fill: none;
+    stroke: var(--circuit-color);
+    stroke-width: 2.0;
+    stroke-linecap: round;
+}
+
+.cb-line--dashed {
+    stroke-dasharray: 5 9;
+}
+
+.cb-node {
+    fill: var(--circuit-color);
+}
+
+.cb-glow {
+    fill: var(--circuit-glow-color);
+    filter: drop-shadow(0 0 4px var(--circuit-glow-color)) drop-shadow(0 0 7px var(--circuit-glow-color));
+}
+
