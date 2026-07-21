@@ -21,12 +21,15 @@ Müasir, tək-səhifəlik (single-page) landing page. Rəqəmsal həllər təqdi
 - Vanilla JavaScript (kitabxanasız)
 
 ## Fayl strukturu
+```
 
 ├── index.html
 ├── style.css
 ├── script.js
 ├── circuit-generator.js
 └── README.md
+
+```
 
 ## Necə işə salmaq olar
 
