@@ -27,6 +27,21 @@
 
     <main>
         <section id="hero" class="hero">
+            <canvas id="particleCanvas" class="hero__canvas"></canvas>
+
+            <svg class="hero__decoration" viewBox="0 0 400 400" fill="none">
+                <circle cx="320" cy="80" r="120" stroke="rgba(250,246,241,0.15)" stroke-width="1"/>
+                <circle cx="320" cy="80" r="80" stroke="rgba(250,246,241,0.15)" stroke-width="1"/>
+                <line x1="200" y1="80" x2="440" y2="80" stroke="rgba(250,246,241,0.1)" stroke-width="1"/>
+                <line x1="320" y1="-40" x2="320" y2="200" stroke="rgba(250,246,241,0.1)" stroke-width="1"/>
+            </svg>
+
+            <svg class="hero__pulse" viewBox="0 0 200 200" fill="none">
+                <circle class="pulse-circle" cx="40" cy="160" r="4" fill="rgba(250,246,241,0.6)"/>
+                <circle class="pulse-circle pulse-circle--delay" cx="90" cy="120" r="4" fill="rgba(250,246,241,0.6)"/>
+                <line x1="40" y1="160" x2="90" y2="120" stroke="rgba(250,246,241,0.2)" stroke-width="1"/>
+            </svg>
+
             <div class="hero__content">
                 <h1 class="hero__title">Rəqəmsal Dünyada Sizin Güvənli Tərəfdaşınız</h1>
                 <p class="hero__text">Biz biznesiniz üçün ən innovativ web və mobil həllərı sıfırdan hazırlayırıq.</p>

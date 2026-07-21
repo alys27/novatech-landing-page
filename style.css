@@ -107,6 +107,8 @@ body {
     color: var(--color-light);
     text-align: center;
     padding: 100px 20px;
+    position: relative;
+    overflow: hidden;
 }
 
 .hero__title {
@@ -120,6 +122,62 @@ body {
     font-size: 1.2rem;
     margin-top: 10px;
     opacity: 0.85;
+}
+
+.hero__decoration {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 400px;
+    height: 400px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.hero__canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.hero__decoration {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 400px;
+    height: 400px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.hero__pulse {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    width: 200px;
+    height: 200px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.pulse-circle {
+    animation: pulse-dot 2s ease-in-out infinite;
+}
+
+.pulse-circle--delay {
+    animation-delay: 1s;
+}
+
+@keyframes pulse-dot {
+    0%, 100% { opacity: 0.3; r: 4; }
+    50% { opacity: 1; r: 6; }
+}
+
+.hero__content {
+    position: relative;
+    z-index: 2;
 }
 
 @keyframes pulse-glow {
