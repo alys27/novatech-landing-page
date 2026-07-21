@@ -164,24 +164,4 @@ function animateParticles() {
     requestAnimationFrame(animateParticles);
 }
 animateParticles();
-
-function resizeCircuitBg() {
-    const bgCircuit = document.querySelector('#bgCircuit');
-    bgCircuit.style.height = document.body.scrollHeight + 'px';
-}
-resizeCircuitBg();
-window.addEventListener('resize', resizeCircuitBg);
-window.addEventListener('load', resizeCircuitBg);
-
-
-function resizeCircuitBg() {
-    const bgCircuit = document.querySelector('#bgCircuit');
-    const circuitSvg = document.querySelector('#circuitSvg');
-    const actualHeight = document.body.scrollHeight;
-    bgCircuit.style.height = actualHeight + 'px';
-    circuitSvg.setAttribute('viewBox', `0 0 1600 ${actualHeight}`);
-}
-resizeCircuitBg();
-window.addEventListener('resize', resizeCircuitBg);
-window.addEventListener('load', resizeCircuitBg);
-setTimeout(resizeCircuitBg, 800); 
+ 

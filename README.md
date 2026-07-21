@@ -30,7 +30,6 @@ Müasir, tək-səhifəlik (single-page) landing page. Rəqəmsal həllər təqdi
 └── README.md
 
 ```
-
 ## Necə işə salmaq olar
 
 Repo-nu klonlayın və `index.html` faylını brauzerdə açın, əlavə quraşdırma tələb olunmur.

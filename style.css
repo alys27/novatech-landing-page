@@ -12,6 +12,14 @@
     --color-gray: #a89586;         /* solğun qəhvəyi-boz - köməkçi mətn, border-lər */
     --color-beige: #e8ddd0;        /* beige - açıq bloklar, kartlar */
     --max-width: 1200px;
+
+
+    --circuit-color: #5d4037;      
+    --circuit-glow-color: #ffd54f; 
+    --circuit-opacity: 0.1;      
+    --circuit-min-speed: 5;        
+    --circuit-max-speed: 11;   
+
 }
 body {
     font-family: Poppins, sans-serif;
@@ -143,15 +151,6 @@ body {
     height: 100%;
 }
 
-.hero__decoration {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 400px;
-    height: 400px;
-    z-index: 1;
-    pointer-events: none;
-}
 
 .hero__pulse {
     position: absolute;
@@ -255,32 +254,46 @@ body {
     box-shadow: 0 12px 30px rgba(0,0,0,0.1);
 }
 
+
 .support-banner {
-    max-width: var(--max-width);
-    margin: 40px auto;
-    background: #f5dde0;
-    border: 2px solid #5c2a3a;
-    border-radius: 10px;
-    padding: 24px;
-    text-align: left;
+    width: fit-content;
+    margin: 24px auto;
 }
 
-.support-banner__title {
+.support-banner__btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(92, 42, 58, 0.12);
+    border: 2px solid #5c2a3a;
+    border-radius: 50px;
+    padding: 10px 24px 10px 10px;
+    text-decoration: none;
+    transition: background 0.2s ease, transform 0.2s ease;
+
+}
+
+.support-banner__btn:hover {
+    background: rgba(92, 42, 58, 0.2);
+    transform: translateY(-2px);
+}
+
+.support-banner__circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    background: #5c2a3a;
+    border-radius: 50%;
+}
+
+.support-banner__text {
     color: #5c2a3a;
     font-weight: 600;
-    margin-bottom: 8px;
+    font-size: 0.95rem;
 }
-
-.support-banner__link {
-    color: #5c2a3a;
-    text-decoration: none;
-    font-weight: 500;
-    overflow-wrap: break-word;
-    word-break: break-word;
-    display: block;
-}
-
-
 
 .gallery {
     max-width: var(--max-width);
@@ -535,13 +548,6 @@ body {
     color: var(--color-gray);
 }
 
-.section-icon {
-    width: 32px;
-    height: 32px;
-    color: var(--color-primary);
-    margin-bottom: 12px;
-}
-
 
 /* Tablet */
 @media (max-width: 1024px) {
@@ -584,7 +590,6 @@ body {
 
     .about__stats {
         gap: 40px;
-        background: rgba(232, 221, 208, 0.5);
     }
 
     .contact {
@@ -667,13 +672,6 @@ body {
 
 /* circuits */
 
-:root {
-    --circuit-color: #5d4037;      
-    --circuit-glow-color: #ffd54f; 
-    --circuit-opacity: 0.1;      
-    --circuit-min-speed: 5;        
-    --circuit-max-speed: 11;       
-}
 
 [data-circuit-bg] {
     position: relative;
